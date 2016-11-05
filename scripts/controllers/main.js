@@ -10,6 +10,7 @@ angular.module('chattyApp')
       if (message) {
         messageService.addMessage(message).then(function ( response ) {
           $scope.messages = response.data;
+          $scope.newMessage = "";
         });
       }
     };
